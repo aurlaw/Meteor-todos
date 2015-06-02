@@ -1,0 +1,18 @@
+<body>
+	<div class="container">
+	<header>
+		<h1>Meteor Todo List</h1>
+	</header>
+
+	<form class="new-tasks">
+		<input type="text" name="text" size="50" placeholder="Type to add new tasks">
+	</form>
+
+	<ul>
+		{{#each tasks}}
+			{{> task}}
+		{{/each}}
+	</ul>
+	</div>
+
+</body>
