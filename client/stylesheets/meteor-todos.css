@@ -1,8 +1,8 @@
 /* CSS declarations go here */
 body {
   font-family: sans-serif;
-  background-color: #315481;
-  background-image: linear-gradient(to bottom, #315481, #918e82 100%);
+  background-color: rgba(138,182,107,1);
+  background-image: linear-gradient(to bottom, rgba(201,222,150,1) 0%,rgba(138,182,107,1) 44%,rgba(57,130,53,1) 100%);
   background-attachment: fixed;
 
   position: absolute;
@@ -20,19 +20,47 @@ body {
 .container {
   max-width: 600px;
   margin: 0 auto;
-  min-height: 100%;
-  background: white;
+/*  min-height: 100%;
+  background: #bfd255;
+  background-image: linear-gradient(to bottom, #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%);*/
+  box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.65);
 }
 
 header {
-  background: #d2edf4;
-  background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
+  background: #bfd255;
+  background-image: linear-gradient(to bottom, #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%);
   padding: 20px 15px 15px 15px;
   position: relative;
 }
 
 #login-buttons {
   display: block;
+}
+
+#login-buttons .login-button, .accounts-dialog .login-button {
+    background: #299a0b;
+  border: 1px solid #299a0b;
+}
+#login-buttons .login-button:hover, .accounts-dialog .login-button:hover {
+    background: #7F9978;
+}
+#login-buttons .login-close-text {
+  float: right;
+ }
+
+
+.accounts-dialog {
+  border: 1px solid #299a0b;
+  z-index: 1000;
+  background: #C3E5B7;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin: -8px -12px 0 -12px;
+  width: 250px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  color: #333;
 }
 
 h1 {
@@ -109,6 +137,20 @@ header .hide-completed {
 .toggle-private {
   margin-left: 5px;
 }
+
+.count-list {
+    background: #299a0b;
+    border-radius: 1em;
+    color: #fff;
+    display: inline-block;
+    font-size: .8rem;
+    line-height: 1;
+    /*margin-left: -1.25rem;*/
+    margin-top: -4px;
+    padding: .3em .5em;
+    vertical-align: middle;
+}
+
 
 @media (max-width: 600px) {
   li {
