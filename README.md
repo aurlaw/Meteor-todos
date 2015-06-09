@@ -9,15 +9,27 @@ View the online demo at [http://aurlaw-meteor-todos.meteor.com/](http://aurlaw-m
 Updates to Use Compass and Sass
 [http://compass-style.org/](http://compass-style.org/)
 
+Requires Ruby 2.0 or higher
+
 
 # Installation #
 
 Download and install [Meteor](https://www.meteor.com/)
 
-cd to this repo then:
+
+## Sass ##
+
+Install Bundler
 ```
-$ cd Meteor-todos
+$ gem install bundler
 ```
+
+Install dependencies (Sass, Compass and Compass-normalize)
+```
+$  bundle install
+```
+
+## Execute ##
 
 execute compass watch for sass and meteor
 ```

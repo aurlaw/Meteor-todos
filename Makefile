@@ -1,8 +1,8 @@
 compass_watch:
-	compass watch
+	bundle exec compass watch
 
 compass_build:
-	compass compile -e production --force
+	bundle exec compass compile -e production --force
 
 meteor:
 	meteor	
