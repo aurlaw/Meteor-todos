@@ -17,7 +17,7 @@ Requires Ruby 2.0 or higher
 Download and install [Meteor](https://www.meteor.com/)
 
 
-## Sass ##
+## Sass Support ##
 
 Install Bundler
 ```
