@@ -1,0 +1,96 @@
+
+#login-buttons {
+  display: block;
+}
+
+#login-buttons .login-button, .accounts-dialog .login-button {
+    background: #299a0b;
+  border: 1px solid #299a0b;
+}
+#login-buttons .login-button:hover, .accounts-dialog .login-button:hover {
+    background: #7F9978;
+}
+#login-buttons .login-close-text {
+  float: right;
+ }
+
+
+.accounts-dialog {
+  border: 1px solid #299a0b;
+  z-index: 1000;
+  background: #C3E5B7;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin: -8px -12px 0 -12px;
+  width: 250px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  color: #333;
+}
+
+
+
+.new-task input {
+  box-sizing: border-box;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  width: 100%;
+  padding-right: 80px;
+  font-size: 1em;
+}
+
+.new-task input:focus{
+  outline: 0;
+}
+
+
+.delete {
+  float: right;
+  font-weight: bold;
+  background: none;
+  font-size: 1em;
+  border: none;
+  position: relative;
+}
+
+
+li .text {
+  margin-left: 10px;
+}
+
+li.checked {
+  color: #888;
+}
+
+li.checked .text {
+  text-decoration: line-through;
+}
+
+li.private {
+  background: #eee;
+  border-color: #ddd;
+}
+
+header .hide-completed {
+  float: right;
+}
+
+.toggle-private {
+  margin-left: 5px;
+}
+
+.count-list {
+    background: #299a0b;
+    border-radius: 1em;
+    color: #fff;
+    display: inline-block;
+    font-size: .8rem;
+    line-height: 1;
+    /*margin-left: -1.25rem;*/
+    margin-top: -4px;
+    padding: .3em .5em;
+    vertical-align: middle;
+}
+

@@ -1,54 +1,90 @@
-/* CSS declarations go here */
+/* line 1, ../../sass/_layout.scss */
 body {
   font-family: sans-serif;
-  background-color: rgba(138,182,107,1);
-  background-image: linear-gradient(to bottom, rgba(201,222,150,1) 0%,rgba(138,182,107,1) 44%,rgba(57,130,53,1) 100%);
+  background-color: #8ab66b;
+  background-image: linear-gradient(to bottom, #c9de96 0%, #8ab66b 44%, #398235 100%);
   background-attachment: fixed;
-
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-
   padding: 0;
   margin: 0;
-
   font-size: 14px;
 }
 
+/* line 18, ../../sass/_layout.scss */
 .container {
   max-width: 600px;
   margin: 0 auto;
-/*  min-height: 100%;
-  background: #bfd255;
-  background-image: linear-gradient(to bottom, #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%);*/
-  box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.65);
+  /*  min-height: 100%;
+    background: #bfd255;
+    background-image: linear-gradient(to bottom, #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%);*/
+  box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.65);
 }
 
+/* line 27, ../../sass/_layout.scss */
 header {
   background: #bfd255;
-  background-image: linear-gradient(to bottom, #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%);
+  background-image: linear-gradient(to bottom, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%);
   padding: 20px 15px 15px 15px;
   position: relative;
 }
 
+/* line 33, ../../sass/_layout.scss */
+h1 {
+  font-size: 1.5em;
+  margin: 0;
+  margin-bottom: 10px;
+  display: inline-block;
+  margin-right: 1em;
+}
+
+/* line 41, ../../sass/_layout.scss */
+form {
+  margin-top: 10px;
+  margin-bottom: -10px;
+  position: relative;
+}
+
+/* line 47, ../../sass/_layout.scss */
+ul {
+  margin: 0;
+  padding: 0;
+  background: white;
+}
+
+/* line 52, ../../sass/_layout.scss */
+li {
+  position: relative;
+  list-style: none;
+  padding: 15px;
+  border-bottom: #eee solid 1px;
+}
+
+/* line 2, ../../sass/_master.scss */
 #login-buttons {
   display: block;
 }
 
+/* line 6, ../../sass/_master.scss */
 #login-buttons .login-button, .accounts-dialog .login-button {
-    background: #299a0b;
+  background: #299a0b;
   border: 1px solid #299a0b;
 }
+
+/* line 10, ../../sass/_master.scss */
 #login-buttons .login-button:hover, .accounts-dialog .login-button:hover {
-    background: #7F9978;
+  background: #7F9978;
 }
+
+/* line 13, ../../sass/_master.scss */
 #login-buttons .login-close-text {
   float: right;
- }
+}
 
-
+/* line 18, ../../sass/_master.scss */
 .accounts-dialog {
   border: 1px solid #299a0b;
   z-index: 1000;
@@ -63,20 +99,7 @@ header {
   color: #333;
 }
 
-h1 {
-  font-size: 1.5em;
-  margin: 0;
-  margin-bottom: 10px;
-  display: inline-block;
-  margin-right: 1em;
-}
-
-form {
-  margin-top: 10px;
-  margin-bottom: -10px;
-  position: relative;
-}
-
+/* line 34, ../../sass/_master.scss */
 .new-task input {
   box-sizing: border-box;
   padding: 10px 0;
@@ -87,16 +110,12 @@ form {
   font-size: 1em;
 }
 
-.new-task input:focus{
+/* line 44, ../../sass/_master.scss */
+.new-task input:focus {
   outline: 0;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  background: white;
-}
-
+/* line 49, ../../sass/_master.scss */
 .delete {
   float: right;
   font-weight: bold;
@@ -106,62 +125,64 @@ ul {
   position: relative;
 }
 
-li {
-  position: relative;
-  list-style: none;
-  padding: 15px;
-  border-bottom: #eee solid 1px;
-}
-
+/* line 59, ../../sass/_master.scss */
 li .text {
   margin-left: 10px;
 }
 
+/* line 63, ../../sass/_master.scss */
 li.checked {
   color: #888;
 }
 
+/* line 67, ../../sass/_master.scss */
 li.checked .text {
   text-decoration: line-through;
 }
 
+/* line 71, ../../sass/_master.scss */
 li.private {
   background: #eee;
   border-color: #ddd;
 }
 
+/* line 76, ../../sass/_master.scss */
 header .hide-completed {
   float: right;
 }
 
+/* line 80, ../../sass/_master.scss */
 .toggle-private {
   margin-left: 5px;
 }
 
+/* line 84, ../../sass/_master.scss */
 .count-list {
-    background: #299a0b;
-    border-radius: 1em;
-    color: #fff;
-    display: inline-block;
-    font-size: .8rem;
-    line-height: 1;
-    /*margin-left: -1.25rem;*/
-    margin-top: -4px;
-    padding: .3em .5em;
-    vertical-align: middle;
+  background: #299a0b;
+  border-radius: 1em;
+  color: #fff;
+  display: inline-block;
+  font-size: .8rem;
+  line-height: 1;
+  /*margin-left: -1.25rem;*/
+  margin-top: -4px;
+  padding: .3em .5em;
+  vertical-align: middle;
 }
 
-
 @media (max-width: 600px) {
+  /* line 3, ../../sass/_queries.scss */
   li {
     padding: 12px 15px;
   }
 
+  /* line 7, ../../sass/_queries.scss */
   .search {
     width: 150px;
     clear: both;
   }
 
+  /* line 12, ../../sass/_queries.scss */
   .new-task input {
     padding-bottom: 5px;
   }

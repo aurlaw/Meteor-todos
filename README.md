@@ -6,6 +6,9 @@ Meteor demo application started from the official [Meteor.com tutorial](https://
 View the online demo at [http://aurlaw-meteor-todos.meteor.com/](http://aurlaw-meteor-todos.meteor.com/)
 
 
+Updates to Use Compass and Sass
+[http://compass-style.org/](http://compass-style.org/)
+
 
 # Installation #
 
@@ -16,9 +19,9 @@ cd to this repo then:
 $ cd Meteor-todos
 ```
 
-run meteor
+execute compass watch for sass and meteor
 ```
-$ meteor
+$ make dev -j2
 ```
 
 This will build and run the app which will be available at http://localhost:3000/
