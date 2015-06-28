@@ -9,3 +9,6 @@ meteor:
 
 dev: compass_watch meteor
 
+
+deploy: compass_build
+	meteor deploy aurlaw-meteor-todos.meteor.com

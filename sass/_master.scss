@@ -1,6 +1,9 @@
 
 #login-buttons {
-  display: block;
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  margin-top: 5px;
 }
 
 #login-buttons .login-button, .accounts-dialog .login-button {
@@ -29,30 +32,37 @@
   color: #333;
 }
 
+.new-tasks {
+  background: #fff;
+  input {
+      box-sizing: border-box;
+      padding: 10px 0;
+      background: transparent;
+      border: none;
+      width: 100%;
+      padding-right: 80px;
+      font-size: 1em;
+
+      &:focus {
+        outline: 0;
+      }
+  }
 
 
-.new-task input {
-  box-sizing: border-box;
-  padding: 10px 0;
-  background: transparent;
-  border: none;
-  width: 100%;
-  padding-right: 80px;
-  font-size: 1em;
 }
 
-.new-task input:focus{
-  outline: 0;
-}
+// .new-task input:focus{
+//   outline: 0;
+// }
 
 
 .delete {
-  float: right;
   font-weight: bold;
   background: none;
   font-size: 1em;
   border: none;
-  position: relative;
+  position: absolute;
+  right: 10px;
 }
 
 
@@ -73,8 +83,27 @@ li.private {
   border-color: #ddd;
 }
 
+.items {
+   ul {
+     li {
+      input {
+          background: transparent;
+          cursor: pointer;
+      &:focus {cursor: text;      }
+      }
+     }
+   }
+}
+
+.editing {
+      input[type="text"] {
+          background: #eee;
+          width: 90%;
+  }
+}
+
 header .hide-completed {
-  float: right;
+  display: inline-block;
 }
 
 .toggle-private {

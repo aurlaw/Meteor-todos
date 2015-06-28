@@ -14,11 +14,13 @@
 		<input type="text" name="text" size="50" placeholder="Type to add new tasks">
 	</form>
 	{{/if}}
-	<ul>
-		{{#each tasks}}
-			{{> task}}
-		{{/each}}
-	</ul>
+		<div class="items">
+		<ul>
+			{{#each tasks}}
+				{{> task}}
+			{{/each}}
+		</ul>
+		</div>
 	</div>
 
 </body>

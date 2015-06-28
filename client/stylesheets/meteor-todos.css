@@ -266,7 +266,7 @@ th {
   padding: 0;
 }
 
-/* line 1, ../../sass/_layout.scss */
+/* line 30, ../../sass/_layout.scss */
 body {
   font-family: sans-serif;
   background-color: #8ab66b;
@@ -282,7 +282,64 @@ body {
   font-size: 14px;
 }
 
-/* line 18, ../../sass/_layout.scss */
+/* line 46, ../../sass/_layout.scss */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  padding: .75rem 0;
+  line-height: 1.5rem !important;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #333;
+  outline: none;
+}
+/* line 23, ../../sass/_layout.scss */
+input[type="text"] ::-webkit-input-placeholder,
+input[type="email"] ::-webkit-input-placeholder,
+input[type="password"] ::-webkit-input-placeholder,
+textarea ::-webkit-input-placeholder {
+  font-style: italic;
+  color: #090;
+  font-weight: 100;
+}
+/* line 24, ../../sass/_layout.scss */
+input[type="text"] :-moz-placeholder,
+input[type="email"] :-moz-placeholder,
+input[type="password"] :-moz-placeholder,
+textarea :-moz-placeholder {
+  font-style: italic;
+  color: #090;
+  font-weight: 100;
+}
+/* line 25, ../../sass/_layout.scss */
+input[type="text"] ::-moz-placeholder,
+input[type="email"] ::-moz-placeholder,
+input[type="password"] ::-moz-placeholder,
+textarea ::-moz-placeholder {
+  font-style: italic;
+  color: #090;
+  font-weight: 100;
+}
+/* line 26, ../../sass/_layout.scss */
+input[type="text"] :-ms-input-placeholder,
+input[type="email"] :-ms-input-placeholder,
+input[type="password"] :-ms-input-placeholder,
+textarea :-ms-input-placeholder {
+  font-style: italic;
+  color: #090;
+  font-weight: 100;
+}
+/* line 70, ../../sass/_layout.scss */
+input[type="text"][disabled],
+input[type="email"][disabled],
+input[type="password"][disabled],
+textarea[disabled] {
+  opacity: .5;
+}
+
+/* line 73, ../../sass/_layout.scss */
 .container {
   max-width: 600px;
   margin: 0 auto;
@@ -292,7 +349,7 @@ body {
   box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.65);
 }
 
-/* line 27, ../../sass/_layout.scss */
+/* line 82, ../../sass/_layout.scss */
 header {
   background: #bfd255;
   background-image: linear-gradient(to bottom, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%);
@@ -300,7 +357,7 @@ header {
   position: relative;
 }
 
-/* line 33, ../../sass/_layout.scss */
+/* line 88, ../../sass/_layout.scss */
 h1 {
   font-size: 1.5em;
   margin: 0;
@@ -309,21 +366,20 @@ h1 {
   margin-right: 1em;
 }
 
-/* line 41, ../../sass/_layout.scss */
+/* line 96, ../../sass/_layout.scss */
 form {
   margin-top: 10px;
-  margin-bottom: -10px;
   position: relative;
 }
 
-/* line 47, ../../sass/_layout.scss */
+/* line 101, ../../sass/_layout.scss */
 ul {
   margin: 0;
   padding: 0;
   background: white;
 }
 
-/* line 52, ../../sass/_layout.scss */
+/* line 106, ../../sass/_layout.scss */
 li {
   position: relative;
   list-style: none;
@@ -331,28 +387,37 @@ li {
   border-bottom: #eee solid 1px;
 }
 
-/* line 2, ../../sass/_master.scss */
-#login-buttons {
-  display: block;
+/* line 112, ../../sass/_layout.scss */
+.items {
+  margin-top: 10px;
+  padding: 0.3em;
 }
 
-/* line 6, ../../sass/_master.scss */
+/* line 2, ../../sass/_master.scss */
+#login-buttons {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  margin-top: 5px;
+}
+
+/* line 9, ../../sass/_master.scss */
 #login-buttons .login-button, .accounts-dialog .login-button {
   background: #299a0b;
   border: 1px solid #299a0b;
 }
 
-/* line 10, ../../sass/_master.scss */
+/* line 13, ../../sass/_master.scss */
 #login-buttons .login-button:hover, .accounts-dialog .login-button:hover {
   background: #7F9978;
 }
 
-/* line 13, ../../sass/_master.scss */
+/* line 16, ../../sass/_master.scss */
 #login-buttons .login-close-text {
   float: right;
 }
 
-/* line 18, ../../sass/_master.scss */
+/* line 21, ../../sass/_master.scss */
 .accounts-dialog {
   border: 1px solid #299a0b;
   z-index: 1000;
@@ -367,8 +432,12 @@ li {
   color: #333;
 }
 
-/* line 34, ../../sass/_master.scss */
-.new-task input {
+/* line 35, ../../sass/_master.scss */
+.new-tasks {
+  background: #fff;
+}
+/* line 37, ../../sass/_master.scss */
+.new-tasks input {
   box-sizing: border-box;
   padding: 10px 0;
   background: transparent;
@@ -377,54 +446,69 @@ li {
   padding-right: 80px;
   font-size: 1em;
 }
-
-/* line 44, ../../sass/_master.scss */
-.new-task input:focus {
+/* line 46, ../../sass/_master.scss */
+.new-tasks input:focus {
   outline: 0;
 }
 
-/* line 49, ../../sass/_master.scss */
+/* line 59, ../../sass/_master.scss */
 .delete {
-  float: right;
   font-weight: bold;
   background: none;
   font-size: 1em;
   border: none;
-  position: relative;
+  position: absolute;
+  right: 10px;
 }
 
-/* line 59, ../../sass/_master.scss */
+/* line 69, ../../sass/_master.scss */
 li .text {
   margin-left: 10px;
 }
 
-/* line 63, ../../sass/_master.scss */
+/* line 73, ../../sass/_master.scss */
 li.checked {
   color: #888;
 }
 
-/* line 67, ../../sass/_master.scss */
+/* line 77, ../../sass/_master.scss */
 li.checked .text {
   text-decoration: line-through;
 }
 
-/* line 71, ../../sass/_master.scss */
+/* line 81, ../../sass/_master.scss */
 li.private {
   background: #eee;
   border-color: #ddd;
 }
 
-/* line 76, ../../sass/_master.scss */
-header .hide-completed {
-  float: right;
+/* line 89, ../../sass/_master.scss */
+.items ul li input {
+  background: transparent;
+  cursor: pointer;
+}
+/* line 92, ../../sass/_master.scss */
+.items ul li input:focus {
+  cursor: text;
 }
 
-/* line 80, ../../sass/_master.scss */
+/* line 99, ../../sass/_master.scss */
+.editing input[type="text"] {
+  background: #eee;
+  width: 90%;
+}
+
+/* line 105, ../../sass/_master.scss */
+header .hide-completed {
+  display: inline-block;
+}
+
+/* line 109, ../../sass/_master.scss */
 .toggle-private {
   margin-left: 5px;
 }
 
-/* line 84, ../../sass/_master.scss */
+/* line 113, ../../sass/_master.scss */
 .count-list {
   background: #299a0b;
   border-radius: 1em;
