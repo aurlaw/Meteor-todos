@@ -36,7 +36,7 @@
   background: #fff;
   input {
       box-sizing: border-box;
-      padding: 10px 0;
+      padding: 10px;
       background: transparent;
       border: none;
       width: 100%;
@@ -51,37 +51,9 @@
 
 }
 
-// .new-task input:focus{
-//   outline: 0;
-// }
 
 
-.delete {
-  font-weight: bold;
-  background: none;
-  font-size: 1em;
-  border: none;
-  position: absolute;
-  right: 10px;
-}
 
-
-li .text {
-  margin-left: 10px;
-}
-
-li.checked {
-  color: #888;
-}
-
-li.checked .text {
-  text-decoration: line-through;
-}
-
-li.private {
-  background: #eee;
-  border-color: #ddd;
-}
 
 .items {
    ul {
@@ -89,26 +61,71 @@ li.private {
       input {
           background: transparent;
           cursor: pointer;
-      &:focus {cursor: text;      }
+          &:focus {cursor: text;}
+      }
+      .toggle-private {
+        margin-left: 5px;
+        @include border-radius(10px);
+        border: none;
+        background: #299a0b;
+        color: #fff;
+        padding: 0.5em;
+        font-size: .7rem;
+      }
+      .text {
+        margin-left: 10px;
+          strong {
+          color: #090;
+          text-transform: uppercase;
+          font-size: 70%;
+
+            &:after {
+              content: " - ";
+            }
+          }
       }
      }
+      .checked {
+        color: #888;
+          background-color: rgb(220,236,244); // Old browsers
+          @include filter-gradient(#dcecf4, #849ba8, vertical); // IE6-9
+          @include background-image(linear-gradient(top, rgba(220,236,244,1) 0%,rgba(132,155,168,1) 100%));        
+        
+        .text, .text input[disabled] {
+          text-decoration: line-through;
+
+        }
+
+      }
+      .private {
+        // background: #eee;
+        border-color: #ddd;
+      }
+
+      .editing {
+          input[type="text"] {
+              background: #fff;
+              width: 90%;
+          }
+      }
+      .delete {
+        font-weight: bold;
+        background: none;
+        font-size: 1em;
+        border: none;
+        position: absolute;
+        right: 10px;
+        color: #c00;
+      }      
    }
 }
 
-.editing {
-      input[type="text"] {
-          background: #eee;
-          width: 90%;
-  }
-}
 
-header .hide-completed {
-  display: inline-block;
-}
 
-.toggle-private {
-  margin-left: 5px;
-}
+
+
+
+
 
 .count-list {
     background: #299a0b;

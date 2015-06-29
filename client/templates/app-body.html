@@ -8,7 +8,21 @@
 		</label>
 		{{> loginButtons}}
 	</header>
-
+    {{#unless connected}}
+      <div class="notifications">
+        <div class="notification">
+			<div class="spinner">
+			  <div class="bounce1"></div>
+			  <div class="bounce2"></div>
+			  <div class="bounce3"></div>
+			</div>        
+          <div class="meta">
+            <div class="title-notification">Trying to connect</div>
+            <div class="description">There seems to be a connection issue</div>
+          </div>
+        </div>
+      </div>
+    {{/unless}}
 	{{#if currentUser}}
 	<form class="new-tasks">
 		<input type="text" name="text" size="50" placeholder="Type to add new tasks">
@@ -21,6 +35,8 @@
 			{{/each}}
 		</ul>
 		</div>
+		<footer>
+			Michael Lawrence<br><a href="https://github.com/aurlaw/Meteor-todos" target="_blank">https://github.com/aurlaw/Meteor-todos</a>
+		</footer>
 	</div>
-
 </body>

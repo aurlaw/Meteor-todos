@@ -1,36 +1,8 @@
-// // Core
-// @color-primary: #2cc5d2; //caribbean teal (buttons)
-// @color-secondary: #5db9ff; //cerulean blue (menu new list)
-// @color-tertiary: #d2edf4; //muted teal (join/signin bg)
-// @color-ancillary: #1c3f53; //deep navy (nav heading, menu icon)
-// @color-complementary: #778b91; //muted navy (add item placeholder)
-
-// // Alert
-// @color-negative: #ff4400; //error, alert
-// @color-note: #f6fccf;
-
-// // Greyscale
-// @color-empty: white;
-// @color-raw: #f8f8f8;
-// @color-raw: #f2f2f2;
-// @color-rare: #eee;
-// @color-medium-rare: #ccc;
-// @color-medium: #aaa;
-// @color-medium-well: #666;
-// @color-well: #555;
-// @color-full: #333;
-@mixin placeholder {
-  ::-webkit-input-placeholder {@content}
-  :-moz-placeholder           {@content}
-  ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}  
-}
-
 
 body {
   font-family: sans-serif;
-  background-color: rgba(138,182,107,1);
-  background-image: linear-gradient(to bottom, rgba(201,222,150,1) 0%,rgba(138,182,107,1) 44%,rgba(57,130,53,1) 100%);
+  background-color: $color-bg;
+  background-image: linear-gradient(to bottom, $color-bg-grad-a 0%,$color-bg 44%,$color-bg-grad-b 100%);
   background-attachment: fixed;
 
   position: absolute;
@@ -54,11 +26,10 @@ textarea {
   line-height: 1.5rem !important;
 
   // Style
-  // .placeholder(@color-complementary);
   @include placeholder {
-      font-style:italic;
       color: #090;
-      font-weight:100;
+      text-transform: uppercase;
+      // padding-left: 0.6em;
   }
 
   border: none;
@@ -80,17 +51,44 @@ textarea {
 }
 
 header {
-  background: #bfd255;
-  background-image: linear-gradient(to bottom, #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%);
+  background: $color-header-bg;
+  background-image: linear-gradient(to bottom, $color-header-bg 0%, $color-header-bg-grad-a 40%, 
+    $color-header-bg-grad-b 75%,$color-header-bg-grad-c 100%);
   padding: 20px 15px 15px 15px;
   position: relative;
-}
-h1 {
-  font-size: 1.5em;
-  margin: 0;
-  margin-bottom: 10px;
+
+  h1 {
+    font-size: 1.5em;
+    margin: 0;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 1em;
+    color: #fff;
+  }
+ .hide-completed {
   display: inline-block;
-  margin-right: 1em;
+}
+
+
+
+}
+footer {
+  background: $color-bg-dark;
+  padding: 20px 15px 15px 15px;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  font-size: 80%;
+  a {
+    &:link, &:hover, &:active {
+      color: #ddd;
+      text-decoration: none;
+    }
+    &:visited {
+      color: #000;
+      text-decoration: none;
+    }
+  }
 }
 
 form {

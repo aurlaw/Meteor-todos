@@ -7,6 +7,12 @@ var EDITING_KEY = 'EDITING_TODO_ID';
   		},
       editingClass: function() {
         return Session.equals(EDITING_KEY, this._id) && 'editing';
+      },
+      markDisabled: function() {
+          return this.checked || !Meteor.userId();
+      },
+      getUsername: function() {
+        return this.username ? this.username : 'n/a';
       }
 
   });
@@ -26,6 +32,7 @@ var EDITING_KEY = 'EDITING_TODO_ID';
     },
     // editing
     'focus input[type=text]': function(event) {
+      // console.log(this.checked);
       Session.set(EDITING_KEY, this._id);
     },
     
@@ -45,10 +52,9 @@ var EDITING_KEY = 'EDITING_TODO_ID';
     // we don't flood the server with updates (handles the event at most once 
     // every 300ms)
     'keyup input[type=text]': _.throttle(function(event) {
-      // Todos.update(this._id, {$set: {text: event.target.value}});
-      console.log(this._id);
-      console.log(event.target.value);
-      //TODO
-    }, 300),
+      // console.log(this._id);
+      // console.log(event.target.value);
+      Meteor.call("updateTask", this._id, event.target.value);
+    }, 300)
 
   });
